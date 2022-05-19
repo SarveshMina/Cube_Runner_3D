@@ -27,11 +27,6 @@ public class PlayerMovement : MonoBehaviour
             rb.AddForce(GoLeft * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
         }
 
-        if (rb.position.z > 400)
-        {
-            FindObjectOfType<GameManger>().EndGame();
-        }
-
         if (rb.position.y < -1f)
         {
             FindObjectOfType<GameManger>().EndGame();

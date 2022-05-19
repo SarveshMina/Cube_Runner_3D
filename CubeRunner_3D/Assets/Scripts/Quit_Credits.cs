@@ -2,9 +2,8 @@ using UnityEngine;
 
 public class Credits : MonoBehaviour
 {
-    public void Quit ()
+    public void Quit_Credits ()
     {
-        Debug.Log("Quit!");
         Application.Quit();
     }
 }
