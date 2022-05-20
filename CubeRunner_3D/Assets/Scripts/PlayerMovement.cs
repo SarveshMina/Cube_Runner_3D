@@ -13,11 +13,16 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
+    public void addForce ()
+    {
+        rb.AddForce(0, 0, forwardForce * Time.deltaTime);
+    }
+
     // Update is called once per frame
     void FixedUpdate()
     {
         // Add a forward force
-        rb.AddForce(0, 0, forwardForce * Time.deltaTime);   
+        addForce();
 
         if ( Input.GetKey("right") )            //Press 'd' to move right
         {
