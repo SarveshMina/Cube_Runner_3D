@@ -6,6 +6,6 @@ public class EndTrigger : MonoBehaviour {
 
     public void OnTriggerEnter ()
     {
-        gameManager.CompleteLevel();
+        Destroy(gameManager.gameObject);
     }
 }

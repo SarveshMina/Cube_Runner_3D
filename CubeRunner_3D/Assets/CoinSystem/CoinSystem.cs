@@ -7,6 +7,7 @@ public class CoinSystem : MonoBehaviour
 {
     public Text coinDisplayText;
     public int currentCoins = 0;
+    public AudioClip coinSound;
 
     void Start()
     {
@@ -34,6 +35,7 @@ public class CoinSystem : MonoBehaviour
         {
             Destroy(col.gameObject);
             currentCoins++;
+            AudioSource.PlayClipAtPoint(coinSound, transform.position);
             PlayerPrefs.SetInt("GameCoin", currentCoins);
             coinDisplayText.text = "Coins: " + currentCoins;
         }
