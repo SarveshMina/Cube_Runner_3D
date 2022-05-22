@@ -6,10 +6,28 @@ public class Score : MonoBehaviour
 {
     public Transform player;
     public Text scoreText;
+    public Text highScore;
+
+    void Start ()
+    {
+        highScore.text = "High Score: " + PlayerPrefs.GetInt("HighScore", 0).ToString();
+    }
 
     // Update is called once per frame
     void Update()
     {
-            scoreText.text = player.position.z.ToString("0");
+        int PlayerScore = int.Parse(scoreText.text);
+        scoreText.text = player.position.z.ToString("0");
+            
+        if (PlayerScore > PlayerPrefs.GetInt("HighScore", 0))
+        {
+            PlayerPrefs.SetInt("HighScore", PlayerScore);
+            highScore.text = "High Score: " + PlayerScore.ToString();
+        }   
+    }
+
+    public void ResetScore ()
+    {
+        PlayerPrefs.DeleteKey("HighScore");
     }
 }
