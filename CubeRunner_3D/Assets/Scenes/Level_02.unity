@@ -1440,7 +1440,24 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 1845297303427899329, guid: 256dffafc8b07694cb52b96fe01faec6, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 1107313537}
+    - target: {fileID: 1845297303427899329, guid: 256dffafc8b07694cb52b96fe01faec6, type: 3}
+      propertyPath: offset.y
+      value: 0.97
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845297303427899329, guid: 256dffafc8b07694cb52b96fe01faec6, type: 3}
+      propertyPath: offset.z
+      value: -3.77
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845297303427899329, guid: 256dffafc8b07694cb52b96fe01faec6, type: 3}
+      propertyPath: smoothSpeed
+      value: 0.9
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 4315424486128413857, guid: 256dffafc8b07694cb52b96fe01faec6, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 256dffafc8b07694cb52b96fe01faec6, type: 3}
 --- !u!1001 &655231718
 PrefabInstance:
@@ -2557,6 +2574,14 @@ PrefabInstance:
       propertyPath: m_UiScaleMode
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8184555832720573822, guid: 94bdecc557489e34cbac06d5bda85c2b, type: 3}
+      propertyPath: m_MatchWidthOrHeight
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8184555832720573823, guid: 94bdecc557489e34cbac06d5bda85c2b, type: 3}
+      propertyPath: m_RenderMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8184555834345956360, guid: 94bdecc557489e34cbac06d5bda85c2b, type: 3}
       propertyPath: m_SizeDelta.x
       value: 316.2513
@@ -2571,7 +2596,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8184555834345956360, guid: 94bdecc557489e34cbac06d5bda85c2b, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 227.79
+      value: 232.9
       objectReference: {fileID: 0}
     - target: {fileID: 8184555834345956361, guid: 94bdecc557489e34cbac06d5bda85c2b, type: 3}
       propertyPath: player
@@ -2599,7 +2624,7 @@ PrefabInstance:
       objectReference: {fileID: 12800000, guid: 7cb2912222469634ba17a77055919ea8, type: 3}
     - target: {fileID: 8184555834345956366, guid: 94bdecc557489e34cbac06d5bda85c2b, type: 3}
       propertyPath: m_FontData.m_FontSize
-      value: 70
+      value: 59
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94bdecc557489e34cbac06d5bda85c2b, type: 3}
