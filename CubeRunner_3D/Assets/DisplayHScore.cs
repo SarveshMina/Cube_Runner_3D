@@ -7,9 +7,9 @@ public class DisplayHScore : MonoBehaviour
 {
     public Text Display_HighScore;
 
-    void Display_Text ()
+    void Start ()
     {
-        Display_HighScore.text = "High Score: " + PlayerPrefs.GetInt("HighScore").ToString();
+        Display_HighScore.text = "High Score: " + PlayerPrefs.GetInt("High_Score").ToString();
     }
     
 }

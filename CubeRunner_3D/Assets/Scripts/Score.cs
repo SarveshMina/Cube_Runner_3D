@@ -8,9 +8,9 @@ public class Score : MonoBehaviour
     public Text scoreText;
     public Text highScore;
 
-    void Start ()
+    void Start()
     {
-        highScore.text = "High Score: " + PlayerPrefs.GetInt("HighScore", 0).ToString();
+        highScore.text = "High Score: " + PlayerPrefs.GetInt("High_Score", 0).ToString();
     }
 
     // Update is called once per frame
@@ -18,16 +18,16 @@ public class Score : MonoBehaviour
     {
         int PlayerScore = int.Parse(scoreText.text);
         scoreText.text = player.position.z.ToString("0");
-            
-        if (PlayerScore > PlayerPrefs.GetInt("HighScore", 0))
+
+        if (PlayerScore > PlayerPrefs.GetInt("High_Score", 0))
         {
-            PlayerPrefs.SetInt("HighScore", PlayerScore);
+            PlayerPrefs.SetInt("High_Score", PlayerScore);
             highScore.text = "High Score: " + PlayerScore.ToString();
-        }   
+        }
     }
 
-    public void ResetScore ()
+    public void ResetScore()
     {
-        PlayerPrefs.DeleteKey("HighScore");
+        PlayerPrefs.DeleteKey("High_Score");
     }
 }
