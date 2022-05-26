@@ -32,7 +32,7 @@ public class AIRotateRight : MonoBehaviour {
 
     IEnumerator Wander()
     {
-        int rotTime = Random.Range(0, 1);
+        int rotTime = Random.Range(0, 1000);
         int rotateWait = Random.Range(0, 0);
         int rotateLorR = Random.Range(1, 1);
 

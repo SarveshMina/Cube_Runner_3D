@@ -7,6 +7,8 @@ TagManager:
   - Obstacle
   - Coin
   - AI
+  - Collider
+  - End
   layers:
   - Default
   - TransparentFX

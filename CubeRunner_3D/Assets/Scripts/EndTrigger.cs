@@ -3,9 +3,11 @@ using UnityEngine;
 public class EndTrigger : MonoBehaviour {
 
     public GameManger gameManager;
+    public PlayerMovement movement;
 
     public void OnTriggerEnter ()
     {
-        Destroy(gameManager.gameObject);
+        movement.enabled = false;
+        gameManager.CompleteLevel();
     }
 }
