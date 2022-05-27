@@ -9,6 +9,7 @@ TagManager:
   - AI
   - Collider
   - End
+  - GameMusic
   layers:
   - Default
   - TransparentFX

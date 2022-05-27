@@ -7,6 +7,7 @@ public class GameManger : MonoBehaviour
     public bool gameHasEnded = false;
 //    public float restartDelay = 2f;
     public GameObject completeLevelUI;
+    public GameObject GameOverUI;
     public GameObject levelUI;
 
     public void CompleteLevel ()
@@ -19,11 +20,12 @@ public class GameManger : MonoBehaviour
     {
         if (gameHasEnded == false)
         {
-            Debug.Log("Game ended");
             gameHasEnded = true;
-
-            //Restarting game after this.
-//            Invoke("Restart", restartDelay);        
+            if (gameHasEnded == true)
+            {
+                GameOverUI.SetActive(true);
+                levelUI.SetActive(false);
+            }      
         }
     }
 

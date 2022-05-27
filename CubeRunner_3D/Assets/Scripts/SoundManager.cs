@@ -8,34 +8,31 @@ using UnityEngine.UI;
 public class SoundManager : MonoBehaviour
 {
     [SerializeField] Slider volumeSlider;
+    public GameObject ObjectMusic;
+    private AudioSource AudioSource;
+    private float MusicVolume = 1f;
 
-    // Start is called before the first frame update
-    void Start()
+
+    private void Start()
     {
-        if (!PlayerPrefs.HasKey("musicVolume"))
-        {
-            PlayerPrefs.SetFloat("musicVolume", 1);
-            Load();
-        }
-        else
-        {
-            Load();
-        }
-    }
-    
-    public void ChangeVolume ()
-    {
-        AudioListener.volume = volumeSlider.value;
-        Save();
-    }
-    
-    private void Load ()
-    {
-        volumeSlider.value = PlayerPrefs.GetFloat("musicVolume");
+        ObjectMusic = GameObject.FindWithTag("GameMusic");
+        AudioSource = ObjectMusic.GetComponent<AudioSource>();
+
+        // Set Volume
+        MusicVolume = PlayerPrefs.GetFloat("volume");
+        AudioSource.volume = MusicVolume;
+        volumeSlider.value = MusicVolume;
     }
 
-    private void Save ()
+    private void Update()
     {
-        PlayerPrefs.SetFloat("musicVolume", volumeSlider.value);
+        AudioSource.volume = MusicVolume;
+        PlayerPrefs.SetFloat("volume", MusicVolume);
     }
+    public void VolumeUpdater(float volume)
+    {
+        MusicVolume = volume;
+    }
+
+
 }

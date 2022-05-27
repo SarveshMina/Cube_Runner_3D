@@ -11,9 +11,9 @@ public class CoinSystem : MonoBehaviour
 
     void Start()
     {
-        if (PlayerPrefs.HasKey("GameCoin"))
+        if (PlayerPrefs.HasKey("Gamecoin"))
         {
-            currentCoins = PlayerPrefs.GetInt("GameCoin");
+            currentCoins = PlayerPrefs.GetInt("Gamecoin");
         } 
         else
         {
@@ -36,7 +36,7 @@ public class CoinSystem : MonoBehaviour
             Destroy(col.gameObject);
             currentCoins++;
             AudioSource.PlayClipAtPoint(coinSound, transform.position);
-            PlayerPrefs.SetInt("GameCoin", currentCoins);
+            PlayerPrefs.SetInt("Gamecoin", currentCoins);
             coinDisplayText.text = "Coins: " + currentCoins;
         }
     }

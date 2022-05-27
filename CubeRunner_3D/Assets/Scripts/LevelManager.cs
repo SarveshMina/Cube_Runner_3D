@@ -7,7 +7,7 @@ public class LevelManager : MonoBehaviour
 {
     public void backToMenu ()
     {
-        SceneManager.LoadScene("Menu 3D");
+        SceneManager.LoadScene("Menu");
     }
 
     public void GoToLevel_01()
@@ -18,5 +18,15 @@ public class LevelManager : MonoBehaviour
     public void GoToLevel_02()
     {
         SceneManager.LoadScene("Level_02");
+    }
+    
+    public void RestartLevel()
+    {
+        SceneManager.LoadScene("Level_02");
+    }
+
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("Menu");
     }
 }
