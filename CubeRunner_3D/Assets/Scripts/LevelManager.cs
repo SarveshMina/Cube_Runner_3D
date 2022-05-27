@@ -19,8 +19,13 @@ public class LevelManager : MonoBehaviour
     {
         SceneManager.LoadScene("Level_02");
     }
-    
-    public void RestartLevel()
+
+    public void RestartLevel_01()
+    {
+        SceneManager.LoadScene("Level_01");
+    }
+
+    public void RestartLevel_02()
     {
         SceneManager.LoadScene("Level_02");
     }
