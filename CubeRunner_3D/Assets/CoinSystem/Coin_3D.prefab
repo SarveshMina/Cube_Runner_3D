@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 6274602143519293641}
   - component: {fileID: 677277156786676250}
   - component: {fileID: 5717849028666728607}
+  - component: {fileID: 5005133971551351576}
   m_Layer: 0
   m_Name: Coin_3D
   m_TagString: Coin
@@ -110,7 +111,7 @@ Transform:
   m_GameObject: {fileID: 6850134397773338865}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: -0, y: -1.92, z: 28.39}
-  m_LocalScale: {x: 0.7, y: 0.1, z: 0.7}
+  m_LocalScale: {x: 1, y: 0.1, z: 1}
   m_Children:
   - {fileID: 3292411379884394560}
   m_Father: {fileID: 0}
@@ -246,3 +247,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!54 &5005133971551351576
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6850134397773338865}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0

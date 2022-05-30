@@ -3,19 +3,20 @@ using UnityEngine;
 public class GroundTile : MonoBehaviour
 {
     GroundSpawner groundSpawner;
+    [SerializeField] GameObject obstaclePrefab;
+    [SerializeField] GameObject coinPrefab;
+
 
     // Start is called before the first frame update
     void Start()
     {
         groundSpawner = GameObject.FindObjectOfType<GroundSpawner>();
-        SpawnObstacle();
-        SpawnCoins();
-        SpawnCoins();
     }
 
     private void OnTriggerExit(Collider other)
     {
-        groundSpawner.SpawnTile();
+
+        groundSpawner.SpawnTile(true);
         Destroy(gameObject, 1);
     }
 
@@ -25,9 +26,7 @@ public class GroundTile : MonoBehaviour
         
     }
 
-    public GameObject obstaclePrefab;
-
-    void SpawnObstacle ()
+    public void SpawnObstacle ()
     {
         // Choose a random point
         int obstacleSpawnIndex = Random.Range(2, 5);
@@ -37,15 +36,13 @@ public class GroundTile : MonoBehaviour
         Instantiate(obstaclePrefab, spawnPoint.position, Quaternion.identity, transform);
     }
 
-    public GameObject coinPrefab;
-
-    void SpawnCoins ()
+    public void SpawnCoins ()
     {
         int coinToSpawn = 10;
 
         for (int i = 0; i < coinToSpawn; i++)
         {
-            GameObject temp = Instantiate(coinPrefab);
+            GameObject temp = Instantiate(coinPrefab, transform);
             temp.transform.position = GetRandomPointInCollider(GetComponent<Collider>());
         }
     }

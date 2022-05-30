@@ -4,9 +4,10 @@ using UnityEngine.UI;
 public class PlayerMovement : MonoBehaviour
 {
     public Rigidbody rb;
-    public float forwardForce = 2000f;
+    public float forwardForce = 1000f;
     public float GoRight = 1000f;   // Force to go left
     public float GoLeft = -1000f;   // Force to go Right
+    public float speedIncreaseAsPerScore = 1f;
 
     // Start is called before the first frame update
     void Start()

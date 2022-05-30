@@ -20,6 +20,8 @@ public class Score : MonoBehaviour
         scoreText.text = player.position.z.ToString("0");
         PlayerPrefs.SetInt("Current_Score", PlayerScore);
 
+
+
         if (PlayerScore > PlayerPrefs.GetInt("High_Score", 0))
         {
             PlayerPrefs.SetInt("High_Score", PlayerScore);

@@ -8,6 +8,7 @@ public class CoinSystem : MonoBehaviour
     public Text coinDisplayText;
     public int currentCoins = 0;
     public AudioClip coinSound;
+    [SerializeField] PlayerMovement playerMovement;
 
     void Start()
     {
@@ -31,10 +32,17 @@ public class CoinSystem : MonoBehaviour
 
     private void OnTriggerEnter(Collider col)
     {
+        if (col.gameObject.tag == "Obstacle")
+        {
+            Destroy(gameObject);
+            return;
+        }
+
         if (col.tag == "Coin")
         {
             Destroy(col.gameObject);
             currentCoins++;
+            playerMovement.forwardForce += playerMovement.speedIncreaseAsPerScore;
             AudioSource.PlayClipAtPoint(coinSound, transform.position);
             PlayerPrefs.SetInt("Gamecoin", currentCoins);
             coinDisplayText.text = "Coins: " + currentCoins;
