@@ -7,7 +7,6 @@ public class PlayerMovement : MonoBehaviour
     public float forwardForce = 2000f;
     public float GoRight = 1000f;   // Force to go left
     public float GoLeft = -1000f;   // Force to go Right
-    public float LoRMultiplier = 2; // Multiplier of the right and left force
 
     // Start is called before the first frame update
     void Start()
@@ -29,11 +28,11 @@ public class PlayerMovement : MonoBehaviour
 
             if (Input.GetKey("right"))            //Press 'd' to move right
             {
-                rb.AddForce(GoRight * LoRMultiplier *Time.deltaTime, 0, 0, ForceMode.VelocityChange);
+                rb.AddForce(GoRight * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
             }
             else if (Input.GetKey("left"))      //Press 'a' to move left
             {
-                rb.AddForce(GoLeft * LoRMultiplier * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
+                rb.AddForce(GoLeft * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
             }
 
             if (rb.position.y < -1f)

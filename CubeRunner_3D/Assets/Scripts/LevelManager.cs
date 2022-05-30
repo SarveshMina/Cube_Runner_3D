@@ -30,6 +30,11 @@ public class LevelManager : MonoBehaviour
         SceneManager.LoadScene("Level_02");
     }
 
+    public void RestartEndlessLevel ()
+    {
+        SceneManager.LoadScene("endless_level");
+    }
+
     public void MainMenu()
     {
         SceneManager.LoadScene("Menu");
