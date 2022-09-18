@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Credits.unity
     guid: 80c976d8c2f71044385028581d872129
+  - enabled: 1
+    path: Assets/Scenes/iostest.unity
+    guid: 7ba4adef9b02660458a608396f34417f
   m_configObjects: {}

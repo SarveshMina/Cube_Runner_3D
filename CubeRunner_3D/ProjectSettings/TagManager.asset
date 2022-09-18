@@ -10,6 +10,7 @@ TagManager:
   - Collider
   - End
   - GameMusic
+  - SpawnTrigger
   layers:
   - Default
   - TransparentFX
