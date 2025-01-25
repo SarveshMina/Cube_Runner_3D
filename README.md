@@ -1,8 +1,6 @@
 Here's a well-structured **README.md** file for your **Cube Runner 3D** GitHub repository:
 
 ---
-
-```markdown
 # 🏃‍♂️ Cube Runner 3D
 
 ![Cube Runner 3D](https://sarveshmina.github.io/main.png)
