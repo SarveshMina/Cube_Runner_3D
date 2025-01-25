@@ -3,8 +3,6 @@ Here's a well-structured **README.md** file for your **Cube Runner 3D** GitHub r
 ---
 # 🏃‍♂️ Cube Runner 3D
 
-![Cube Runner 3D](https://sarveshmina.github.io/main.png)
-
 **Cube Runner 3D** is an **endless runner game** built using **Unity** and **C#**. The player controls a **cube** that must navigate through an obstacle-filled environment while maintaining high speed. 
 
 🚀 **Play it live here:**  
@@ -95,14 +93,13 @@ Feel free to use and modify it for personal or educational projects.
 ## 📬 Contact
 👤 **Sarvesh Mina**  
 🔗 [Portfolio Website](https://sarveshmina.github.io)  
-📧 Email: [your-email@example.com]  
+📧 Email: sarvesh.mina@outlook.com  
 🐙 GitHub: [SarveshMina](https://github.com/SarveshMina)  
 🎮 Play the Game: [Cube Runner 3D](https://sarveshmina.github.io/games/cube_runner_3d/)
 
 ---
 
 🎮 **Enjoy playing Cube Runner 3D!** 🚀🔥
-```
 
 ---
 
